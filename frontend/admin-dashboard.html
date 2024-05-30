@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>NeuroLingo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class=" body-font bg-gray-300">
+        <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <div class="material-icons text-lg px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500" onclick="history.back()">arrow_back</div>
+                <span class="ml-3 text-xl">NeuroLingo</span>
+            </a>
+            <select
+                class=" md:ml-auto inline-flex items-center bg-[#27477D] border-0 py-2 px-3 focus:outline-none hover:bg-indigo-400 text-base text-white mt-4 md:mt-0 rounded-lg w-1/5 mr-5">Button
+                <option value="mindwave">MindWave Mobile</option>
+            </select>
+            <nav class="flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 flex items-center">Device Connected <div class="bg-green-500 rounded-full ml-3"
+                        style="width: 10px;height: 10px;"></div></a>
+            </nav>
+
+        </div>
+    </header>
+    <section>
+        <div class="xl:w-1/3 md:w-1/2 p-2">
+            <div class="bg-gray-100 p-6 rounded-lg flex flex-row text-gray-600">
+                <div class="flex-col w-2/3">
+                    <div class="font-bold text-black">Nailan Nabil</div>
+                    <div>Created at : 27 March 2024</div>
+                    <div>Record File : 12 mb</div>
+                </div>
+                <div class="w-1/3 flex flex-col gap-2">
+                    <a href="./start-test.html" class=" cursor-pointer p-2 rounded-full w-full justify-center flex bg-gray-300 hover:bg-gray-500">Start test</a>
+                    <a href="detail-segment.html" class=" cursor-pointer p-2 rounded-full w-full justify-center flex bg-[#27477D] text-white hover:bg-indigo-400">Dashboard</a>
+                </div>
+            </div>
+        </div>
+        <div class="xl:w-1/3 md:w-1/2 p-2">
+            <div class="bg-gray-100 p-10 rounded-lg flex flex-row justify-center text-gray-600">
+                <div class="flex-col w-2/3">
+                    <a   class="p-3 flex justify-center rounded-full bg-green-500 hover:bg-green-700 cursor-pointer text-white">+ Add New Segment</a>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

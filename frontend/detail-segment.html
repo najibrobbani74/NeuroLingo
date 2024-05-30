@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>NeuroLingo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class=" body-font bg-gray-300">
+        <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <div class="material-icons text-lg px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500" onclick="history.back()">arrow_back</div>
+                <span class="ml-3 text-xl">NeuroLingo</span>
+            </a>
+            <select
+                class=" md:ml-auto inline-flex items-center bg-[#27477D] border-0 py-2 px-3 focus:outline-none hover:bg-indigo-400 text-base text-white mt-4 md:mt-0 rounded-lg w-1/5 mr-5">Button
+                <option value="mindwave">MindWave Mobile</option>
+            </select>
+            <nav class="flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 flex items-center">Device Connected <div class="bg-green-500 rounded-full ml-3"
+                        style="width: 10px;height: 10px;"></div></a>
+            </nav>
+
+        </div>
+    </header>
+    <section>
+        <div class="flex flex-row border-b-2">
+            <div class="flex flex-col px-5 py-5 w-1/2">
+                <span>Embed Link</span>
+                <div>
+                    <input class="border-2 py-3 px-4 rounded-lg w-5/6" placeholder="Paste your embed link here"
+                        type="text" name="" id="" value="https://docs.google.com/forms/d/e/1FAIpQLScocLAGnDp7n5zaxTfqxrn4wpGX1XqMhwOx_agi_MYIPhDr0A/viewform?usp=sf_link">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScocLAGnDp7n5zaxTfqxrn4wpGX1XqMhwOx_agi_MYIPhDr0A/viewform?usp=sf_link" class="border-2 py-3 px-4 rounded-lg bg-gray-400 text-white">Open</a>
+                </div>
+            </div>
+            <div class="flex flex-col px-5 py-5 w-1/2 ">
+                <span>Duration</span>
+                <div>
+                    <input class="border-2 py-3 px-4 rounded-lg" placeholder="Paste your embed link here" type="time"
+                        name="" id="" value="02:00:00">
+                    <a href="./start-test.html" class="border-2 py-3 px-4 rounded-full bg-[#27477D] hover:bg-indigo-400 text-white">Open
+                        Test Preview</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="flex flex-row p-5 gap-3">
+            <a href="./mindwave-dashboard.html" class="border-2 py-3 px-4 rounded-full bg-[#27477D] hover:bg-indigo-400 text-white">Open Mind Wave
+                Dashboard</a>
+            <select
+                class="border-2 border-[#27477D] py-3 px-4 rounded-full bg-white hover:bg-gray-200 cursor-pointer text-[#27477D]">Open
+                <option value="">COM 4</option>
+            </select>
+            <a class="mr-5 flex items-center">Wave Quality <div class="bg-green-500 rounded-full ml-3"
+                    style="width: 10px;height: 10px;"></div></a>
+        </div>
+    </section>
+    <section>
+        <div class="flex flex-row justify-between border-b-2 py-5">
+            <div class="flex flex-row px-10 text-gray-600 ">
+                <div class="flex flex-col ">
+                    <span class="text-xl font-bold">Language Analysis</span>
+                    <span>Semantic Understanding : <span class="text-green-500">High</span> </span>
+                    <span>Word Understanding : <span class="text-yellow-500">Medium</span> </span>
+                    <span>Decision making : <span class="text-green-500">Fast</span> </span>
+                    <span>Understanding complex sentences : <span class="text-yellow-500">Medium</span> </span>
+                    <span>sensory processing : <span class="text-yellow-500">Medium</span> </span>
+                </div>
+                <div class="flex flex-col justify-center items-center px-10 gap-3">
+                    <span>Language skor</span>
+                    <span class="text-5xl font-bold">78</span>
+                    <span class="text-green-500">High</span>
+                </div>
+            </div>
+            <div class="flex flex-row px-10 text-gray-600 ">
+                <div class="flex flex-col ">
+                    <span class="text-xl font-bold">Event Related Potentials (ERP) Analysis</span>
+                    <span>N100 : 76 | <span class="text-green-500">High</span> </span>
+                    <span>P200 : 56 | <span class="text-green-500">High</span> </span>
+                    <span>N200 : 76 | <span class="text-yellow-500">Medium</span></span>
+                    <span>P300 : 54 | <span class="text-yellow-500">Medium</span> </span>
+                    <span>N400 : 51 | <span class="text-green-500">High</span> </span>
+                    <span>P600 : 49 | <span class="text-green-500">High</span> </span>
+                </div>
+                <div class="flex flex-col justify-center items-center px-10 gap-3">
+                    <span>ERP Rate</span>
+                    <span class="text-5xl font-bold">83</span>
+                    <span class="text-green-500">High</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+        <div class="xl:w-1/2 md:w-1/2 p-2">
+            <div class="bg-gray-100 p-6 rounded-lg flex flex-row text-gray-600">
+                <div class="flex-col w-2/4">
+                    <div>Start : <br><b>27 March 2024 | 12:23:10</b></div>
+                    <div>Start : <br><b>27 June 2024 | 12:43:10</b></div>
+                    <div>Duration : <b>20 Minutes</b></div>
+                </div>
+                <div class="w-2/4 flex flex-col gap-2 items-center justify-center">
+                    <a href="detail-segment.html"
+                        class=" cursor-pointer p-2 rounded-full w-full justify-center flex bg-[#27477D] text-white hover:bg-indigo-400">Open Mind Wave Dashboard</a>
+                    <a
+                        class=" cursor-pointer p-2 rounded-full w-full justify-center flex bg-gray-300 hover:bg-gray-500">Download EDF File</a>
+                </div>
+            </div>
+        </div>
+        <div class="xl:w-1/2 md:w-1/2 p-2">
+            <div class="bg-gray-100 p-10 rounded-lg flex flex-row justify-center text-gray-600">
+                <div class="flex-col w-2/3">
+                    <a
+                        class="p-3 flex justify-center rounded-full bg-green-500 hover:bg-green-700 cursor-pointer text-white">+
+                        Add New Segment</a>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+</body>
+
+</html>

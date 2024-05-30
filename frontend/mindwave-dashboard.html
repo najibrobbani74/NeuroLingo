@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>NeuroLingo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./src/app.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./wailsjs/runtime/runtime.js"></script>
+
+</head>
+
+<body class="bg-black">
+    <header class=" body-font bg-black">
+        <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <div class="material-icons text-white text-lg px-2 py-1 rounded-full cursor-pointer hover:bg-gray-500"
+                    onclick="history.back()">arrow_back</div>
+                <span class="ml-3 text-xl text-white">NeuroLingo</span>
+            </a>
+            <select
+                class=" md:ml-auto inline-flex items-center bg-[#27477D] border-0 py-2 px-3 focus:outline-none hover:bg-indigo-400 text-base text-white mt-4 md:mt-0 rounded-lg w-1/5 mr-5">Button
+                <option value="mindwave">MindWave Mobile</option>
+            </select>
+            <nav class="flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 flex items-center text-white">Device Connected <div
+                        class="bg-green-500 rounded-full ml-3" style="width: 10px;height: 10px;"></div></a>
+            </nav>
+
+        </div>
+    </header>
+    <section class="">
+        <div class="m-5 flex gap-10">
+            <canvas id="myChart" style="width:250px;max-width:500px;max-height: 500px;"></canvas>
+            <canvas id="myChart2" style="width:250px;max-width:500px;max-height: 250px;"></canvas>
+        </div>
+        <div class="m-5 text-white" id="app">
+        </div>
+    </section>
+    <script type="module" src="./src/dashboard-mindwave.js"></script>
+
+    <!-- <script>
+        let data = {
+            labels: [
+                'Delta',
+                'Theta',
+                'Low Alpha',
+                'High Alpha',
+                'Low Beta',
+                'High Beta',
+                'Low Gamma'
+            ],
+            datasets: [{
+                label: 'BrainWave Data',
+                data: [860, 114, 106, 106, 107, 111, 133],
+                fill: true,
+                // backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                backgroundColor: 'rgba(0,0,255,0.3)',
+                borderColor: 'rgb(0, 0, 255)',
+                pointBackgroundColor: 'rgb(0, 0, 255)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+            }]
+        };
+        let config = {
+            type: 'radar',
+            data: data,
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                }
+            },
+        };
+        let chart = new Chart("myChart",config)
+        function startInterval() {
+            // chart.data.labels.shift();
+            // chart.data.labels.push(i++)
+
+            // chart.data.datasets[0].data.shift();
+            chart.data.datasets[0].data[0] = getRandomArNumber(1,1000)
+
+            // chart.data.datasets[1].data.shift();
+            chart.data.datasets[0].data[1] = getRandomArNumber(1,1000)
+            
+            // chart.data.datasets[2].data.shift();
+            chart.data.datasets[0].data[2] = getRandomArNumber(1,1000)
+            
+            // chart.data.datasets[3].data.shift();
+            chart.data.datasets[0].data[3] = getRandomArNumber(1,1000)
+            
+            // chart.data.datasets[4].data.shift();
+            chart.data.datasets[0].data[4] = getRandomArNumber(1,1000)
+            
+            // chart.data.datasets[5].data.shift();
+            chart.data.datasets[0].data[5] = getRandomArNumber(1,1000)
+            
+            // chart.data.datasets[6].data.shift();
+            chart.data.datasets[0].data[6] = getRandomArNumber(1,1000)
+            
+
+            chart.update();
+        }
+        setInterval(startInterval, 500)
+        function getRandomArNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+    </script>
+    <script>
+        let i = 10
+        const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let chart2 = new Chart("myChart2", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [
+                    {
+                        label: 'Delta',
+                        data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                        borderColor: "red",
+                        fill: true,
+                        hidden: false,
+                    },
+                    {
+                        data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                        borderColor: "green",
+                        fill: false,
+                        label: "Theta",
+                        hidden: true
+                    }, {
+                        data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                        borderColor: "blue",
+                        fill: false,
+                        label: "Low Alpha",
+                        hidden: true
+                    },
+                    {
+                        label: 'High Alpha',
+                        data: [479, 1140, 1060, 1060, 568, 3444, 1330, 2210, 345, 5322],
+                        borderColor: "yellow",
+                        fill: false,
+                        hidden: true
+                    },
+                    {
+                        data: [1600, 9996, 1700, 7777, 2000, 5555, 4000, 3334, 6000, 11222],
+                        borderColor: "purple",
+                        fill: false,
+                        label: "Low Beta",
+                        hidden: true
+                    }, {
+                        data: [1124, 4445, 6654, 3212, 3456, 6789, 2000, 9980, 200, 1123],
+                        borderColor: "orange",
+                        fill: false,
+                        label: "High Beta",
+                        hidden: true
+                    },
+                    {
+                        data: [4456, 1123, 444, 2232, 6000, 4000, 2223, 1000, 5567, 4432],
+                        borderColor: "pink",
+                        fill: false,
+                        label: "Low Gamma",
+                        hidden: true
+                    }
+                ]
+            },
+            options: {
+                legend: { display: false }
+            }
+        });
+        function startInterval() {
+            chart2.data.labels.shift();
+            chart2.data.labels.push(i++)
+
+            chart2.data.datasets[0].data.shift();
+            chart2.data.datasets[0].data.push(getRandomArNumber(1,1000));
+
+            chart2.data.datasets[1].data.shift();
+            chart2.data.datasets[1].data.push(getRandomArNumber(1,1000));
+            
+            chart2.data.datasets[2].data.shift();
+            chart2.data.datasets[2].data.push(getRandomArNumber(1,1000));
+            
+            chart2.data.datasets[3].data.shift();
+            chart2.data.datasets[3].data.push(getRandomArNumber(1,1000));
+            
+            chart2.data.datasets[4].data.shift();
+            chart2.data.datasets[4].data.push(getRandomArNumber(1,1000));
+            
+            chart2.data.datasets[5].data.shift();
+            chart2.data.datasets[5].data.push(getRandomArNumber(1,1000));
+            
+            chart2.data.datasets[6].data.shift();
+            chart2.data.datasets[6].data.push(getRandomArNumber(1,1000));
+            
+
+            chart2.update('none');
+        }
+        setInterval(startInterval, 500)
+        function getRandomArNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+
+    </script> -->
+</body>
+
+</html>
